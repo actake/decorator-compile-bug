@@ -24,6 +24,8 @@ module.exports = {
                 {
                   useBuiltIns: "usage",
                   corejs: { version: "3", proposals: true },
+                  // if remove targets config, work well
+                  // but if add this config, will show error runtime
                   targets: {
                     chrome: "85",
                     safari: "13",
