@@ -24,8 +24,9 @@ module.exports = {
                 {
                   useBuiltIns: "usage",
                   corejs: { version: "3", proposals: true },
-                  // if remove targets config, work well
-                  // but if add this config, will show error runtime
+                  // 1. when use dev mode to compile, set targets to following targets config will make runtime error
+                  // 2. when use product mode to compile, set targets to following targets config, everything is OK!
+                  // 3. when use dev mode to compile, and remove targets config, also no any error
                   targets: {
                     chrome: "85",
                     safari: "13",

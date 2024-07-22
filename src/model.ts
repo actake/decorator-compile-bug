@@ -1,26 +1,10 @@
-const Decorator = (extConfig?) => {
+const Decorator = (targetClass, config?) => {
+  // maybe use targetClass to do something
   return (Cls) => {
-    console.log("Cls: ", Cls);
     return class extends Cls {};
   };
 };
 
-const Log = (target, key, descriptor) => {
-  const originMethod = descriptor.value;
-
-  descriptor.value = function (...params) {
-    console.log("in log decorator...");
-    originMethod.apply(this, params);
-  };
-
-  return descriptor;
-};
-
+// will show runtime error
 @Decorator(Main)
-class Main {
-  @Log
-  test() {}
-}
-
-// @ts-ignore
-window.Test = new Main();
+class Main {}
