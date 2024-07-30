@@ -58,4 +58,7 @@ module.exports = {
       template: path.resolve(__dirname, "./public/index.html"),
     }),
   ],
+  optimization: {
+    minimize: false,
+  },
 };

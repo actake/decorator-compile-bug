@@ -8,3 +8,5 @@ const Decorator = (targetClass, config?) => {
 // will show runtime error
 @Decorator(Main)
 class Main {}
+
+export const ins = new Main();

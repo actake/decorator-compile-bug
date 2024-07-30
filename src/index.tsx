@@ -10,6 +10,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { App } from "./App";
 
-import "./model";
+import { ins } from "./model";
+
+console.log("ins: ", ins);
 
 ReactDOM.render(<App />, document.getElementById("root"));
